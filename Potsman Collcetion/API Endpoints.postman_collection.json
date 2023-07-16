@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "07543c96-7e64-480c-8447-94dde3d7cee8",
+		"name": "API Endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22787876"
+	},
+	"item": [
+		{
+			"name": "top-authors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/articles/top-authors",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"articles",
+						"top-authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "article_by_id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "articles_for_given_author",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

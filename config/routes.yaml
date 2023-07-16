@@ -1,7 +1,22 @@
 controllers:
     resource: ../src/Controller/
     type: annotation
-
 kernel:
     resource: ../src/Kernel.php
     type: annotation
+article_index:
+    path: /
+    controller: App\Controller\ArticleController::index
+    methods: [GET]
+article_by_id:
+    path: /api/articles/{id}
+    controller: App\Controller\ApiController::getArticleById
+    methods: [GET]
+articles_by_author:
+    path: /api/articles/author/{id}
+    controller: App\Controller\ApiController::getArticlesByAuthor
+    methods: [GET]
+article_top_authors:
+    path: /api/article/top-authors
+    controller: App\Controller\ApiController::getTopAuthors
+    methods: [GET]

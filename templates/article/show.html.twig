@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>{{ article.title }}</h1>
+
+    <p>{{ article.createdAt|date('Y-m-d H:i:s') }}</p>
+
+    <div>{{ article.text }}</div>
+
+    <h2>Authors:</h2>
+    <ul>
+        {% for author in article.authors %}
+            <li>{{ author.firstName }} {{ author.lastName }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ path('article_index') }}">Back to list</a>
+{% endblock %}
