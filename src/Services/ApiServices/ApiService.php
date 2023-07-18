@@ -7,15 +7,8 @@ use App\Repository\AuthorRepository;
 
 class ApiService
 {
-    private $authorRepository;
-    private $articleRepository;
-
-    public function __construct(
-        AuthorRepository $authorRepository,
-        ArticleRepository $articleRepository
-    ) {
-        $this->authorRepository = $authorRepository;
-        $this->articleRepository = $articleRepository;
+    public function __construct(private AuthorRepository $authorRepository, private ArticleRepository $articleRepository) 
+    {
     }
 
     public function getArticleById($id)
