@@ -11,7 +11,7 @@ class ApiService
     {
     }
 
-    public function getArticleById($id)
+    public function getArticleById(int $id): array|string
     {
         $article = $this->articleRepository->find($id);
 
@@ -36,7 +36,7 @@ class ApiService
     }
 
 
-    public function getArticlesByAuthor($id)
+    public function getArticlesByAuthor(int $id): array|string
     {
         $articles = $this->articleRepository->findArticlesByAuthor($id);
 
@@ -56,7 +56,7 @@ class ApiService
         return $response;
     }
 
-    public function getTopAuthors()
+    public function getTopAuthors(): array|string
     {
         $authors = $this->authorRepository->findTopAuthorsLastWeek(3);
 
