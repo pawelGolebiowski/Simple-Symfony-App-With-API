@@ -10,11 +10,8 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ApiController extends AbstractController
 {
-    private $articleService;
-
-    public function __construct(ApiService $articleService)
+    public function __construct(private ApiService $articleService)
     {
-        $this->articleService = $articleService;
     }
 
     #[Route('/api/articles/{id}', name: 'article_by_id', methods: ['GET'])]
